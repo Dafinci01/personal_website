@@ -20,8 +20,6 @@ document.querySelectorAll('nav a').forEach(link => {
 document.getElementById('contact-form').addEventListener('submit', event => {
     event.preventDefault();
 
-    // Perform form validation and submission logic here
-    // ...
 
     alert('Thank you for your message!');
 });

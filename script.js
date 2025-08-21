@@ -16,12 +16,3 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Example code to show a simple alert when the contact form is submitted
-document.getElementById('contact-form').addEventListener('submit', event => {
-    event.preventDefault();
-
-    // Perform form validation and submission logic here
-    // ...
-
-    alert('Thank you for your message!');
-});
