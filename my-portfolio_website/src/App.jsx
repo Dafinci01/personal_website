@@ -1,29 +1,25 @@
-import React from'react';
-import IntroAnimation  from "./components/IntroAnimation";
+import React from 'react';
+import NavBar from "./assets/components/NavBar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import About  from "./pages/About";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
-import About from "./pages/About";
-import Project from "./pages/Project";
-import NavBar  from "./assets/components/NavBar";
+
 function App() {
     return (
         <BrowserRouter>
-            <IntroAnimation/>
-            <NavBar/>
+            <NavBar />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/project" element={<Project />} />
+                <Route path = "/" element={ <Home/>} />
+                <Route path = "/" element={ <About/>} />
+                <Route path = "/" element={ <Contact/>} />
+                <Route path = "/" element={ <Blog/>} />
+
 
             </Routes>
-        
+
         </BrowserRouter>
-
-
     );
 }
 
