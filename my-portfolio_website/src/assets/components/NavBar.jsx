@@ -1,5 +1,11 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { Link } from "react-router-dom";
+import { Menu , X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+
+
 
 export default function NavBar() {
   return (
@@ -16,7 +22,7 @@ export default function NavBar() {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/project">Project</Link></li>
+          <li><Link to="/projects">Project</Link></li>
         </ul>
       </div>
     </header>
