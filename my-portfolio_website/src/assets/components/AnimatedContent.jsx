@@ -1,17 +1,31 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import AnimatedContent from "./AnimatedContent"; // <-- import here
 
-const AnimatedContent = ({ isVisible = true, delay = 0, children }) => {
+export default function NavBar() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
-      transition={{ duration: 0.35, delay: delay / 1000 }}
-      aria-hidden={!isVisible}
-    >
-      {children}
-    </motion.div>
-  );
-};
+    <header className="bg-white shadow-md">
+      <div className="container mx-auto flex justify-between items-center py-4">
+        {/* Left side */}
+        <AnimatedContent delay={200}>
+          <div className="text-xl font-bold">
+            <Link to="/">Dafinci.</Link>
+          </div>
+        </AnimatedContent>
 
-export default AnimatedContent;
+        {/* Right side */}
+        <AnimatedContent delay={400}>
+          <ul className="flex gap-6">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/projects">Project</Link></li>
+          </ul>
+        </AnimatedContent>
+      </div>
+    </header>
+  );
+}
