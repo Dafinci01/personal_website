@@ -1,29 +1,30 @@
-import React, {lazy, Suspense} from 'react';
+// src/App.jsx
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import NavBar from "./assets/components/NavBar";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-
-//lazy load pages 
-const HomePage = lazy(() => import("./pages/Home/HomePage"));
-const BlogHome = lazy(() => import("./pages/Blog/BlogHome"));
-const ProjectsPage = lazy(() => import("./pages/Projects/ProjectsPage"));
+import HomePage from "./pages/Home/HomePage";
+import ProjectsPage from "./pages/Projects/ProjectsPage";
+import AnimatedContent from "./assets/components/AnimatedContent";
+import BlogHome from "./pages/Blog/BlogHome";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <NavBar />
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    <Route path ="/blog" element= {<BlogHome/>} />
-                    <Route path = "/projects" element = {<ProjectsPage />} />
+  return (
+    <BrowserRouter>
+      <NavBar />
 
-                </Routes>
-            
-            </Suspense>
-            
-        </BrowserRouter>
-    );
+      {/* Wrap Routes with AnimatedContent for transitions */}
+      <AnimatedContent>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+
+          {/* Blog routes */}
+          <Route path="/blog" element={<BlogHome />} />
+        </Routes>
+      </AnimatedContent>
+    </BrowserRouter>
+  );
 }
-./
+
 export default App;

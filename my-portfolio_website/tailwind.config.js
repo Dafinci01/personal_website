@@ -16,6 +16,14 @@ export default {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+			hero: {
+				start: "#f9fafb",   // gray-50
+				middle: "#ffffff",  // white
+				end: "#eff6ff",     // blue-50
+			},
+			backgroundImage: {
+				"hero-gradient": "linear-gradient(to bottom right, var(--tw-gradient-stops))",
+			},			  
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -56,6 +64,6 @@ export default {
   			}
   		}
   	}
-  },
+  },                      
   plugins: [require("tailwindcss-animate")],
 };

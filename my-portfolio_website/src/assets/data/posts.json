@@ -1,0 +1,21 @@
+[
+    {
+      "id": "flask-intro",
+      "title": "Intro to Flask",
+      "category": "python",
+      "content": "Flask is a lightweight WSGI web application framework in Python..."
+    },
+    {
+      "id": "linq-basics",
+      "title": "LINQ Basics",
+      "category": "csharp",
+      "content": "LINQ (Language Integrated Query) is a set of features in C#..."
+    },
+    {
+      "id": "react-hooks",
+      "title": "Mastering React Hooks",
+      "category": "javascript",
+      "content": "React hooks allow you to use state and lifecycle methods in functional components..."
+    }
+  ]
+  

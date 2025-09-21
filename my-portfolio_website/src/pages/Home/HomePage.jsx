@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import HeroSection from "../../assets/components/HeroSection";
+import AboutSection from "../../assets/components/AboutSection";
+import ContactSection from "../../assets/components/ContactSection";
 
-function HomePage() {
+
+const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <>
+      <HeroSection />
+      <AboutSection />
+      <ContactSection/>
+    </>
+  );
+};
 
-export default HomePage
+export default HomePage;

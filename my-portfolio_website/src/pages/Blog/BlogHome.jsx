@@ -1,28 +1,12 @@
-// src/pages/Blog/BlogHome.jsx
-import { Link } from "react-router-dom";
-import posts from "../../assets/data/posts.json";
+import React from "react";
 
-export default function BlogHome() {
-  // Extract unique categories
-  const categories = [...new Set(posts.map((p) => p.category))];
-
+const BlogHome = () => {
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">Blog</h1>
-      <p>Pick a category to explore:</p>
-
-      <ul className="space-y-2 mt-4">
-        {categories.map((cat) => (
-          <li key={cat}>
-            <Link 
-              to={`/blog/${cat}`} 
-              className="text-blue-500 hover:underline"
-            >
-              {cat.toUpperCase()}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <div>
+      <h1>Blog Home</h1>
+      <p>This is the blog home page.</p>
     </div>
   );
-}
+};
+
+export default BlogHome;
