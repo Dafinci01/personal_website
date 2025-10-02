@@ -4,7 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import HomePage from "../../pages/Home/HomePage";
 import ProjectsPage from "../../pages/Projects/ProjectsPage";
-// import BlogPage from "../../pages/Blog/BlogPage";
+import BlogHome from "../../pages/Blog/BlogHome";
 
 export default function AnimatedContent() {
   const location = useLocation();
@@ -36,6 +36,19 @@ export default function AnimatedContent() {
               transition={{ duration: 0.5 }}
             >
               <ProjectsPage />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              <BlogHome />
             </motion.div>
           }
         />
